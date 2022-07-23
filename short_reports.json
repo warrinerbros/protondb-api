@@ -1,0 +1,446 @@
+[{
+  "app": {
+    "steam": {
+      "appId": "352620"
+    },
+    "title": "Porcunipine"
+  },
+  "responses": {
+    "answerToWhatGame": "352620",
+    "appSelectionMethod": "libraryLookup",
+    "installs": "no",
+    "notes": {
+      "extra": "oh noes",
+      "verdict": "is le borked"
+    },
+    "protonVersion": "Default",
+    "type": "steamPlay",
+    "verdict": "no"
+  },
+  "timestamp": 1572299227,
+  "systemInfo": {
+    "cpu": "Intel Core i5-6600K @ 3.50GHz",
+    "gpu": "NVIDIA GeForce GTX 980 Ti",
+    "gpuDriver": "NVIDIA 396.54",
+    "kernel": "4.15.0-33-generic",
+    "os": "Ubuntu 18.04.1 LTS",
+    "ram": "16 GB"
+  }
+},
+{
+"app": {
+"steam": {
+"appId": "219990"
+},
+"title": "Grim Dawn"
+},
+"responses": {
+"answerToWhatGame": "219990",
+"audioFaults": "no",
+"duration": "lessThanAnHour",
+"extra": "no",
+"graphicalFaults": "no",
+"inputFaults": "no",
+"installs": "yes",
+"isImpactedByAntiCheat": "no",
+"isMultiplayerImportant": "no",
+"localMultiplayerAttempted": "no",
+"notes": {
+"verdict": "out the box"
+},
+"onlineMultiplayerAttempted": "no",
+"opens": "yes",
+"performanceFaults": "no",
+"protonVersion": "Default",
+"saveGameFaults": "no",
+"significantBugs": "no",
+"stabilityFaults": "no",
+"startsPlay": "yes",
+"type": "steamPlay",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572304395,
+"systemInfo": {
+"cpu": "Intel Core i7-6700 @ 3.40GHz",
+"gpu": "NVIDIA GeForce GTX 980",
+"gpuDriver": "NVIDIA 440.26",
+"kernel": "5.3.7-arch1-1-ARCH",
+"os": "Arch Linux",
+"ram": "16 GB"
+}
+},
+{
+"app": {
+"steam": {
+"appId": "367500"
+},
+"title": "Dragon's Dogma: Dark Arisen"
+},
+"responses": {
+"answerToWhatGame": "367500",
+"appSelectionMethod": "libraryLookup",
+"audioFaults": "no",
+"duration": "moreThanTenHours",
+"extra": "yes",
+"graphicalFaults": "no",
+"inputFaults": "no",
+"installs": "yes",
+"notes": {
+"extra": "Whilst it is possible to use pawns made by other players, and to send items via the pawns, whenever the server is contacted in-game an error message pops up saying it cannot be reached. It seems certain data is being sent and received, but not all of it. Items can be sent via pawns by a Linux player, but cannot be received on the other end, and the Linux player's pawn will never receive a rating nor items should they be hired by another player.",
+"significantBugs": "Online features are not fully supported. ",
+"verdict": "With D9VK enabled, the game runs almost perfectly."
+},
+"opens": "yes",
+"performanceFaults": "no",
+"protonVersion": "Default",
+"saveGameFaults": "no",
+"significantBugs": "yes",
+"stabilityFaults": "no",
+"startsPlay": "yes",
+"type": "steamPlay",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572305157,
+"systemInfo": {
+"cpu": "AMD Ryzen 5 2600 Six-Core",
+"gpu": "NVIDIA GeForce GTX 970",
+"gpuDriver": "NVIDIA 435.21",
+"kernel": "5.2.21-1-MANJARO",
+"os": "Manjaro Linux",
+"ram": "8 GB"
+}
+},
+{
+"app": {
+"steam": {
+"appId": "251570"
+},
+"title": "7 Days to Die"
+},
+"responses": {
+"answerToWhatGame": "251570",
+"audioFaults": "no",
+"duration": "moreThanTenHours",
+"extra": "yes",
+"followUp": {
+"isImpactedByAntiCheat": {
+"easyAntiCheat": true
+}
+},
+"graphicalFaults": "no",
+"inputFaults": "no",
+"installs": "yes",
+"isImpactedByAntiCheat": "yes",
+"isMultiplayerImportant": "no",
+"localMultiplayerAttempted": "no",
+"notes": {
+"extra": "start option on unity launcher \n-force-d3d11 popupwindow\n\nin game, press F1 to open console and put\ngfx pp enable 0",
+"verdict": "with preset on high i have 55-60 fps"
+},
+"onlineMultiplayerAttempted": "no",
+"opens": "yes",
+"performanceFaults": "no",
+"protonVersion": "Default",
+"saveGameFaults": "no",
+"significantBugs": "no",
+"stabilityFaults": "no",
+"startsPlay": "yes",
+"type": "steamPlay",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572305804,
+"systemInfo": {
+"cpu": "Intel Core i7-6700 @ 3.40GHz",
+"gpu": "NVIDIA GeForce GTX 980",
+"gpuDriver": "NVIDIA 440.26",
+"kernel": "5.3.7-arch1-1-ARCH",
+"os": "Arch Linux",
+"ram": "16 GB"
+}
+},
+{
+"app": {
+"steam": {
+"appId": "292030"
+},
+"title": "The Witcher 3: Wild Hunt"
+},
+"responses": {
+"answerToWhatGame": "292030",
+"appSelectionMethod": "libraryLookup",
+"audioFaults": "no",
+"duration": "moreThanTenHours",
+"extra": "no",
+"graphicalFaults": "no",
+"inputFaults": "no",
+"installs": "yes",
+"notes": {
+"verdict": "Runs perfectly"
+},
+"opens": "yes",
+"performanceFaults": "no",
+"protonVersion": "Default",
+"saveGameFaults": "no",
+"significantBugs": "no",
+"stabilityFaults": "no",
+"startsPlay": "yes",
+"type": "steamPlay",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572306754,
+"systemInfo": {
+"cpu": "Intel Core i5-4590 @ 3.30GHz",
+"gpu": "NVIDIA GeForce GTX 1060 6GB",
+"gpuDriver": "NVIDIA 430.50",
+"kernel": "4.15.0-66-generic",
+"os": "Ubuntu 18.04.3 LTS",
+"ram": "12 GB"
+}
+},
+{
+"app": {
+"steam": {
+"appId": "376680"
+},
+"title": "Splendor"
+},
+"responses": {
+"answerToWhatGame": "376680",
+"audioFaults": "yes",
+"duration": "severalHours",
+"extra": "no",
+"followUp": {
+"audioFaults": {
+"crackling": true
+}
+},
+"graphicalFaults": "no",
+"inputFaults": "no",
+"installs": "yes",
+"notes": {
+"audioFaults": "Crackling happens only to the background music and does not affect gameplay."
+},
+"opens": "yes",
+"performanceFaults": "no",
+"protonVersion": "Default",
+"saveGameFaults": "no",
+"significantBugs": "no",
+"stabilityFaults": "no",
+"startsPlay": "yes",
+"type": "steamPlay",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572307647,
+"systemInfo": {
+"cpu": "Intel Core i7-4770K @ 3.50GHz",
+"gpu": "Radeon RX 590",
+"gpuDriver": "4.5 Mesa 19.1.7",
+"kernel": "5.3.6-200.fc30.x86_64",
+"os": "Fedora release 30 (Thirty)",
+"ram": "16 GB"
+}
+},
+{
+"app": {
+"steam": {
+"appId": "7760"
+},
+"title": "X-COM: UFO Defense"
+},
+"responses": {
+"answerToWhatGame": "7760",
+"audioFaults": "no",
+"customizationsUsed": {
+"customProton": true
+},
+"duration": "severalHours",
+"extra": "no",
+"graphicalFaults": "no",
+"inputFaults": "no",
+"installs": "yes",
+"launchFlagsUsed": {
+"largeAddressAware": false
+},
+"launcher": "steam",
+"notes": {
+"customizationsUsed": "Using [Boxtron](https://github.com/dreamer/boxtron) 0.5.3",
+"protonVersion": "boxtron-0.5.3"
+},
+"opens": "yes",
+"performanceFaults": "no",
+"protonVersion": "boxtron-0.5.3",
+"saveGameFaults": "no",
+"significantBugs": "no",
+"stabilityFaults": "no",
+"startsPlay": "yes",
+"type": "tinker",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572308932,
+"systemInfo": {
+"cpu": "Intel Core i7-4770K @ 3.50GHz",
+"gpu": "Radeon RX 590",
+"gpuDriver": "4.5 Mesa 19.1.7",
+"kernel": "5.3.6-200.fc30.x86_64",
+"os": "Fedora release 30 (Thirty)",
+"ram": "16 GB"
+}
+},
+{
+"app": {
+"steam": {
+"appId": "221380"
+},
+"title": "Age of Empires II (2013)"
+},
+"responses": {
+"answerToWhatGame": "221380",
+"audioFaults": "no",
+"duration": "severalHours",
+"extra": "no",
+"followUp": {
+"performanceFaults": "significantSlowdown"
+},
+"graphicalFaults": "no",
+"inputFaults": "no",
+"installs": "yes",
+"isImpactedByAntiCheat": "no",
+"isMultiplayerImportant": "yes",
+"localMultiplayerAttempted": "no",
+"notes": {
+"performanceFaults": "Major lag with VSync enabled on Wayland",
+"verdict": "Have to enable and then disable VSync every time you start the game with Wayland, otherwise perfect."
+},
+"onlineMultiplayerAttempted": "no",
+"opens": "yes",
+"performanceFaults": "yes",
+"protonVersion": "Default",
+"saveGameFaults": "no",
+"significantBugs": "no",
+"stabilityFaults": "no",
+"startsPlay": "yes",
+"type": "steamPlay",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572309085,
+"systemInfo": {
+"cpu": "Intel Core i7-8565U @ 1.80GHz",
+"gpu": "Intel HD (Whiskey Lake 3x8 GT2)",
+"gpuDriver": "3.0 Mesa 19.1.7",
+"kernel": "5.3.5-1-default",
+"os": "openSUSE Tumbleweed",
+"ram": "8 GB"
+}
+},
+{
+"app": {
+"steam": {
+"appId": 427510
+},
+"title": "Way of the Samurai 3"
+},
+"responses": {
+"answerToWhatGame": "427510",
+"audioFaults": "no",
+"customizationsUsed": {
+"protontricks": true
+},
+"duration": "aboutAnHour",
+"extra": "no",
+"followUp": {
+"graphicalFaults": {
+"other": true
+},
+"stabilityFaults": "notListed"
+},
+"graphicalFaults": "yes",
+"inputFaults": "no",
+"installs": "yes",
+"launcher": "steam",
+"notes": {
+"customizationsUsed": "Use protontricks or wine to install LAVFilers.",
+"graphicalFaults": "Startup movie skips and stutters",
+"stabilityFaults": "Game fails to shut down occasionally; kill via system monitor",
+"verdict": "Works OK with LAVFilters installed"
+},
+"opens": "yes",
+"performanceFaults": "no",
+"protonVersion": "4.11-7",
+"saveGameFaults": "no",
+"significantBugs": "no",
+"stabilityFaults": "yes",
+"startsPlay": "yes",
+"type": "tinker",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572310816,
+"systemInfo": {
+"cpu": "Intel Core i7-6700HQ @ 2.60GHz",
+"gpu": "NVIDIA GeForce GTX 980M",
+"gpuDriver": "NVIDIA 435.21",
+"kernel": "5.3.0-19-generic",
+"os": "Ubuntu 19.10",
+"ram": "32 GB"
+}
+},
+{
+"app": {
+"steam": {
+"appId": "367270"
+},
+"title": "Angels Fall First"
+},
+"responses": {
+"answerToWhatGame": "367270",
+"audioFaults": "yes",
+"duration": "aboutAnHour",
+"extra": "no",
+"followUp": {
+"audioFaults": {
+"other": true
+},
+"performanceFaults": "significantSlowdown"
+},
+"graphicalFaults": "no",
+"inputFaults": "no",
+"installs": "yes",
+"isImpactedByAntiCheat": "no",
+"isMultiplayerImportant": "yes",
+"localMultiplayerAttempted": "no",
+"notes": {
+"audioFaults": "When in ships, the boost sound mutes everything.",
+"verdict": "It runs out of the box. But you do have to input some start up commands to run smooth. (use PROTON_USE_D9VK & PROTON_NO_ESYNC)"
+},
+"onlineMultiplayerAppraisal": "excellent",
+"onlineMultiplayerAttempted": "yes",
+"onlineMultiplayerPlayed": "yes",
+"opens": "yes",
+"performanceFaults": "yes",
+"protonVersion": "Default",
+"saveGameFaults": "no",
+"significantBugs": "no",
+"stabilityFaults": "no",
+"startsPlay": "yes",
+"type": "steamPlay",
+"verdict": "yes",
+"windowingFaults": "no"
+},
+"timestamp": 1572311105,
+"systemInfo": {
+"cpu": "Intel Core i5-7300HQ @ 2.50GHz",
+"gpu": "NVIDIA GeForce GTX 1050 Ti",
+"gpuDriver": "NVIDIA 435.21",
+"kernel": "5.3.0-19-generic",
+"os": "Pop!_OS 19.10",
+"ram": "8 GB"
+}
+}
+  ]
