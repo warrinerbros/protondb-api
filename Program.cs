@@ -2,6 +2,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.EntityFrameworkCore;
+using TestApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddDbContext<ProtonDbApi.Repos.ReportContext>(
         .EnableSensitiveDataLogging()
         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
 );
+builder.Services.AddScoped<IReportService, ReportService>();
 
 var app = builder.Build();
 
