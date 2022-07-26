@@ -1,10 +1,10 @@
-using System.Diagnostics;
+using ProtonDbApi.Jobs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProtonDbApi.Repos;
 using ProtonDbApi.Models;
 using Newtonsoft.Json;
-using TestApi.Services;
+using ProtonDbApi.Services;
 
 namespace ProtonDbApi.Controllers;
 
@@ -50,7 +50,8 @@ public class ReportController : ControllerBase
     [HttpGet("reports/load")]
     public async Task<ActionResult> LoadReports()
     {
-        string path = "short_reports.json";
+        await GetNewReportsJob.GetAndExtractReportsFromGithub();
+        string path = "DownloadedReports/reports_piiremoved.json";
         string json = System.IO.File.ReadAllText(path);
         var specialCharactersRemovedJson = String.Concat(json.Where(c => c < 255));
         var reportList = JsonConvert.DeserializeObject<List<RawReport>>(specialCharactersRemovedJson);

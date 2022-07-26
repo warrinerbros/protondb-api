@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using ProtonDbApi.Repos;
 using ProtonDbApi.Models;
 
-namespace TestApi.Services;
+namespace ProtonDbApi.Services;
 
 public interface IReportService
 {
