@@ -265,3 +265,6 @@ __pycache__/
 
 # Docker environment file
 .env
+
+# Ignore large files that can't be pushed to github
+DownloadedReports/
