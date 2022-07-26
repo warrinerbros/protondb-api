@@ -267,4 +267,4 @@ __pycache__/
 .env
 
 # Ignore large files that can't be pushed to github
-DownloadedReports/
+Reports/
