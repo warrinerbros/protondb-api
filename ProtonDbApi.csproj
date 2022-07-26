@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DownloadedReports" />
+    <Folder Include="Reports" />
   </ItemGroup>
 
 </Project>

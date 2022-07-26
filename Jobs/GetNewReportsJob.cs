@@ -12,8 +12,8 @@ public static class GetNewReportsJob
         // var day = now.Day;
         var day = 1;
         var year = now.Year;
-        var tarPath = @"DownloadedReports/download.tar.gz";
-        var tarDir = @"DownloadedReports";
+        var tarPath = @"Reports/download.tar.gz";
+        var tarDir = @"Reports";
         var tarFileName = month + day + "_" + year + ".tar.gz";
         var reportUrl = "https://github.com/bdefore/protondb-data/raw/master/reports/reports_" + tarFileName;
 
