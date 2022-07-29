@@ -1,10 +1,25 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Http.Json;
+using System.Transactions;
+using Hangfire;
+using Hangfire.MySql;
 using Microsoft.EntityFrameworkCore;
 using ProtonDbApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+// string connectionString = Environment.GetEnvironmentVariable("PROTON_DB_CONNECTION") ?? string.Empty;
+string connectionString = "Server=localhost;Database=proton_db;Uid=proton_db_user;Pwd=Abc1234";
+
+// GlobalConfiguration.Configuration.UseStorage(
+//     new MySqlStorage(connectionString, new MySqlStorageOptions
+//     {
+//         TransactionIsolationLevel = IsolationLevel.ReadCommitted,
+//         QueuePollInterval = TimeSpan.FromSeconds(15),
+//         JobExpirationCheckInterval = TimeSpan.FromHours(1),
+//         CountersAggregateInterval = TimeSpan.FromMinutes(5),
+//         PrepareSchemaIfNecessary = true,
+//         DashboardJobListLimit = 50000,
+//         TransactionTimeout = TimeSpan.FromMinutes(1),
+//         TablesPrefix = "Hangfire"
+//     }));
 
 // Add services to the container.
 builder.Services.AddControllers().AddJsonOptions(options =>
@@ -12,11 +27,32 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.IgnoreNullValues = true;
 });
 
+// Add Hangfire services.
+builder.Services.AddHangfire(configuration => configuration
+    .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+    .UseSimpleAssemblyNameTypeSerializer()
+    .UseRecommendedSerializerSettings()
+    .UseStorage(
+        new MySqlStorage(connectionString, new MySqlStorageOptions
+        {
+            TransactionIsolationLevel = IsolationLevel.ReadCommitted,
+            QueuePollInterval = TimeSpan.FromSeconds(15),
+            JobExpirationCheckInterval = TimeSpan.FromHours(1),
+            CountersAggregateInterval = TimeSpan.FromMinutes(5),
+            PrepareSchemaIfNecessary = true,
+            DashboardJobListLimit = 50000,
+            TransactionTimeout = TimeSpan.FromMinutes(1),
+            TablesPrefix = "Hangfire"
+        })));
+
+// Add the processing server as IHostedService
+builder.Services.AddHangfireServer();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ProtonDbApi.Repos.ReportContext>(
-    opt => opt.UseMySQL("Server=localhost;Port=33060;Database=proton_db;Uid=proton_db_user;Pwd=Abc1234;SSL Mode=Required;")
+    opt => opt.UseMySQL(connectionString)
         .EnableSensitiveDataLogging()
         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
 );
@@ -38,3 +74,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
