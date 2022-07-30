@@ -14,5 +14,4 @@ public class ReportContext : DbContext
         modelBuilder.Entity<Reports>()
             .HasOne(p => p.Notes);
     }
-    
 }
