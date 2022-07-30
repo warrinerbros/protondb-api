@@ -1,8 +1,10 @@
+using ProtonDbApi.Jobs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProtonDbApi.Repos;
 using ProtonDbApi.Models;
 using Newtonsoft.Json;
+using ProtonDbApi.Services;
 
 namespace ProtonDbApi.Controllers;
 
@@ -12,40 +14,44 @@ public class ReportController : ControllerBase
 {
     private readonly ILogger<ReportController> Logger;
     private readonly ReportContext Context;
+    private IReportService ReportService;
 
-    public ReportController(ILogger<ReportController> logger, ReportContext context)
+    public ReportController(ILogger<ReportController> logger, ReportContext context, IReportService reportService)
     {
         Logger = logger;
         Context = context;
+        ReportService = reportService;
     }
     
     [HttpGet("reports/")]
-    public async Task<ActionResult<IEnumerable<Reports>>> GetReports(int? appId, string? title, int? timestamp) //[FromRoute]SearchParameters? searchParameters = null
+    public async Task<ActionResult<IEnumerable<Reports>>> GetReports([FromQuery] QueryParameters queryParameters)
     {
-        var reports = Context.Reports.Select(a => a);
-
-        if (appId is not null)
+        if (queryParameters.pageSize is < 1 or > 100)
         {
-            reports = reports.Where(b => b.AppId == appId);
+            queryParameters.pageSize = 100;
         }
 
-        if (title is not null)
+        var reportsQuery = await ReportService.GetReports(queryParameters);
+
+        try
         {
-            reports = reports.Where(b => b.Title.Contains(title));
+            return await reportsQuery.ToListAsync();
         }
-        
-        if (timestamp is not null)
+        catch (Exception ex)
         {
-            reports = reports.Where(b => b.Timestamp > timestamp);
+            const string errorString = "An error occured while processing the request";
+            Logger.LogError(errorString);
+            return Problem( title: errorString, detail: ex.Message);
         }
+
         
-        return await reports.Include(s => s.Notes).ToListAsync();
     }
 
     [HttpGet("reports/load")]
     public async Task<ActionResult> LoadReports()
     {
-        string path = "reports_piiremoved.json";
+        await GetNewReportsJob.GetAndExtractReportsFromGithub();
+        string path = "DownloadedReports/reports_piiremoved.json";
         string json = System.IO.File.ReadAllText(path);
         var specialCharactersRemovedJson = String.Concat(json.Where(c => c < 255));
         var reportList = JsonConvert.DeserializeObject<List<RawReport>>(specialCharactersRemovedJson);
