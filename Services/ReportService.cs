@@ -46,6 +46,7 @@ public class ReportService : IReportService
         
         return reports
             .OrderBy(x => x.Title)
+            .ThenBy(x=>x.Timestamp)
             .Skip((queryParameters.page - 1) * queryParameters.pageSize)
             .Take(queryParameters.pageSize)
             .Include(s => s.Notes);
