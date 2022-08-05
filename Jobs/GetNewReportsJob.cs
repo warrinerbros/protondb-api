@@ -128,9 +128,9 @@ public class GetNewReportsJob : IGetNewReportsJob
             try
             {
                 // Remove any existing rows
-                await Context.Database.ExecuteSqlRawAsync("DELETE FROM Notes");
                 await Context.Database.ExecuteSqlRawAsync("DELETE FROM Reports");
-
+                await Context.Database.ExecuteSqlRawAsync("DELETE FROM Notes");
+                
                 // Add new rows
                 Context.Reports.AddRange(parsedReports);
                 await Context.SaveChangesAsync();
